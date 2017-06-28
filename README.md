@@ -10,6 +10,8 @@
 
 #### [Demo: must see first](https://lqip-loader.firebaseapp.com/)
 
+#### How To Use
+
 #### Inspired By:
 - Medium web app
 - Instagram mobile app

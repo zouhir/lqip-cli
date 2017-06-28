@@ -1,11 +1,11 @@
 {
   "name": "lqip-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "CLI to generate Low Quality Image Placeholders (LQIP)",
   "main": "index.js",
   "bin": {
-    "del": "index.js",
-    "del-cli": "index.js"
+    "lqip": "index.js",
+    "lqip-cli": "index.js"
   },
   "engines": {
     "node": ">=6"
