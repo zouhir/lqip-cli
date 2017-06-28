@@ -12,6 +12,18 @@
 
 #### How To Use
 
+`npm i -g lqip-cli`
+
+`lqip ./my-image-directory/images.jpg`
+
+**options**
+
+`--no-copy` alternatively `-n`: will disable copying the Base64 string to clipboard
+
+*example:*
+
+`lqip -n ./my-image-directory/images.jpg`
+
 #### Inspired By:
 - Medium web app
 - Instagram mobile app
