@@ -38,7 +38,6 @@ promise.then(
   base64 => {
     console.log("\n" + chalk.green("✅ Success") + "\n");
     console.log(chalk.green(base64) + "\n");
-    console.log(cli.flags.noCopy);
     if (typeof cli.flags["noCopy"] === "undefined") {
       ncp.copy(base64, () => {
         console.log(
