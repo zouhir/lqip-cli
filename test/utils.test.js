@@ -8,9 +8,9 @@ describe('Utils check for unfound files', () => {
   before(() => {
     mockFiles({
       'test/dir/images': {
-        'earth.png': new Buffer([8, 6, 7, 5, 3, 0, 9]),
-        'sky.jpeg': new Buffer([8, 6, 7, 5, 3, 0, 9]),
-        'air.jpg': new Buffer([8, 6, 7, 5, 3, 0, 9]),
+        'earth.png': new Buffer.from([8, 6, 7, 5, 3, 0, 9]),
+        'sky.jpeg': new Buffer.from([8, 6, 7, 5, 3, 0, 9]),
+        'air.jpg': new Buffer.from([8, 6, 7, 5, 3, 0, 9]),
       },
     });
   });

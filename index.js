@@ -12,14 +12,17 @@ const cli = meow(
 	Usage
 	  $ lqip <path|glob>
 	Options
-	  -n, --no copy to disable copying the Base64 string to clipboard
+	  --no-copy to disable copying the Base64 string to clipboard
 	Examples
-	  $ lqip ./images/banner.jpeg
+    $ lqip ./images/banner.jpeg
+    $ lqip ./images/banner.jpeg --no-copy
     `,
   {
-    string: ["no-copy"],
-    alias: {
-      n: "no-copy"
+    flags: {
+      copy: {
+        type: 'boolean',
+        default: true
+      },
     }
   }
 );
@@ -31,14 +34,14 @@ if (cli.input.length === 0) {
 }
 
 // WIP only 1 file supported -- sorry!
-const promise = lqip(cli.input[0]);
+const promise = lqip.base64(cli.input[0]);
 
 // WIP only 1 file supported -- sorry!
 promise.then(
   base64 => {
     console.log("\n" + chalk.green("✅ Success") + "\n");
     console.log(chalk.green(base64) + "\n");
-    if (typeof cli.flags["noCopy"] === "undefined") {
+    if (cli.flags.copy) {
       ncp.copy(base64, () => {
         console.log(
           chalk.yellow("✨ The Base64 above has been copied to your clipboard")
