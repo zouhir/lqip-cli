@@ -31,7 +31,7 @@ if (cli.input.length === 0) {
 }
 
 // WIP only 1 file supported -- sorry!
-const promise = lqip(cli.input[0]);
+const promise = lqip.base64(cli.input[0]);
 
 // WIP only 1 file supported -- sorry!
 promise.then(
